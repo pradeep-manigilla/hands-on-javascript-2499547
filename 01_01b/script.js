@@ -11,7 +11,7 @@ const mainContent = document.querySelector(".main-content");
 
 const getDate = (imgData) => {
   const date = new Date(imgData.created_at);
-  const niceDate = date.toLocalString("default", {
+  const niceDate = date.toLocaleString("default", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -46,7 +46,7 @@ const Card = (data) => {
           </p>
           <p>
             Uploaded on
-            <time class="image__date" datetime="${imgData.created_at}">
+            <time class="image__date" datetime="">
             ${getDate(imgData)}
             </time>
           </p>
